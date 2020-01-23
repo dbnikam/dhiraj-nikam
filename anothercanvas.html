@@ -1,0 +1,66 @@
+<html>
+<head><title> Canvas </title></head>
+<body>
+
+<canvas id="dhiraj" width="500" height="600" style="border: 6px solid black;"></canvas>
+<script>
+var c = document.getElementById("dhiraj");
+var td = c.getContext("2d");
+
+
+var grd1 = td.createRadialGradient(75, 50, 5, 90, 60, 100);
+grd1.addColorStop("0","red");
+grd1.addColorStop("0.5","black");
+grd1.addColorStop("1","yellow");
+
+td.strokeStyle=grd1;
+td.linewidth=5;
+
+var grd = td.createRadialGradient(75, 50, 5, 90, 60, 100);
+grd.addColorStop("0.5","orange");
+grd.addColorStop("1","purple");
+
+td.fillStyle = grd;
+td.fillRect(0,0,1000,1000);
+
+td.moveTo(100, 0);
+td.lineTo(0, 20000);
+
+td.moveTo(200, 0);
+td.lineTo(0, 40000);
+
+td.moveTo(300, 0);
+td.lineTo(0, 60000);
+
+td.moveTo(400, 0);
+td.lineTo(0, 80000);
+
+
+//for rows
+
+td.moveTo(0, 100);
+td.lineTo(20000, 0);
+
+td.moveTo(0, 200);
+td.lineTo(40000, 0);
+
+td.moveTo(0, 300);
+td.lineTo(60000, 0);
+
+td.moveTo(0, 400);
+td.lineTo(80000, 0);
+
+td.moveTo(0, 500);
+td.lineTo(100000, 0);
+
+
+
+
+
+td.stroke();
+td.beginpath();
+td.stroke();
+</script>
+
+</body>
+</html>
